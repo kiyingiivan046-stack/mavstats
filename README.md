@@ -1,2 +1,2 @@
-# mavstats
-Mavstats-Professional statistical analysis, data analytics, econometrics and research services
+# MaveriQuant Analytics
+MaveriQuant Analytics-Professional statistical analysis, data analytics, econometrics and research services
