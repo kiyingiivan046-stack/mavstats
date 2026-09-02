@@ -1,6 +1,6 @@
 /* =====================================================
    MAVERIQUANT ANALYTICS
-   Main Website Styles
+   Professional Corporate Website Theme
    ===================================================== */
 
 /* ---------- RESET ---------- */
@@ -22,8 +22,14 @@ body {
     background: #ffffff;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
-/* ---------- GENERAL ---------- */
+a {
+    text-decoration: none;
+}
 
 .container {
     width: 90%;
@@ -33,6 +39,32 @@ body {
 
 .section {
     padding: 100px 0;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(36px, 5vw, 58px);
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+h2 span {
+    color: #0057b8;
+}
+
+p {
+    font-size: 17px;
+    color: #5d6878;
 }
 
 .section-heading {
@@ -47,42 +79,26 @@ body {
 }
 
 .section-label {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #1769aa;
+    color: #0057b8;
     margin-bottom: 12px;
 }
 
-h2 {
-    font-size: clamp(36px, 5vw, 58px);
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
 
-h2 span {
-    color: #1769aa;
-}
-
-p {
-    font-size: 17px;
-    color: #5d6878;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* ---------- HEADER ---------- */
+/* =====================================================
+   HEADER / NAVIGATION
+   ===================================================== */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid #e8edf3;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e5ebf2;
+    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -96,15 +112,16 @@ a {
 .logo h1 {
     font-size: 25px;
     line-height: 1;
-    color: #14213d;
+    color: #061a33;
     letter-spacing: -1px;
 }
 
 .logo span {
-    font-size: 12px;
-    color: #1769aa;
+    font-size: 11px;
+    color: #0057b8;
     letter-spacing: 3px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 nav {
@@ -114,26 +131,59 @@ nav {
 }
 
 nav a {
+    position: relative;
     color: #394456;
     font-size: 15px;
     font-weight: 600;
     transition: 0.3s ease;
 }
 
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #0057b8;
+    transition: 0.3s ease;
+}
+
 nav a:hover {
-    color: #1769aa;
+    color: #0057b8;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 
-/* ---------- HERO ---------- */
+/* =====================================================
+   HERO
+   ===================================================== */
 
 .hero {
     min-height: 720px;
     display: flex;
     align-items: center;
+
     background:
-        linear-gradient(135deg, #f5f9fd 0%, #ffffff 55%, #edf6fc 100%);
+        radial-gradient(circle at 85% 20%, #dceeff 0%, transparent 25%),
+        linear-gradient(135deg, #f4f9ff 0%, #ffffff 55%, #eaf4ff 100%);
+
+    position: relative;
     overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 87, 184, 0.08);
+    right: -100px;
+    bottom: -120px;
 }
 
 .hero-content {
@@ -147,17 +197,18 @@ nav a:hover {
     font-size: 14px;
     font-weight: 800;
     letter-spacing: 4px;
-    color: #1769aa;
+    color: #0057b8;
     margin-bottom: 20px;
 }
 
 .hero h2 {
     font-size: clamp(48px, 7vw, 82px);
-    letter-spacing: -3px;
+    letter-spacing: -4px;
+    color: #061a33;
 }
 
 .hero h2 span {
-    color: #1769aa;
+    color: #0057b8;
 }
 
 .hero-text > p:not(.small-title) {
@@ -166,54 +217,70 @@ nav a:hover {
     margin: 25px 0 35px;
 }
 
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
 .hero-buttons {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-
-/* ---------- BUTTONS ---------- */
-
 .btn {
     display: inline-block;
-    padding: 14px 25px;
+    padding: 15px 27px;
     border-radius: 8px;
     font-weight: 700;
     transition: 0.3s ease;
 }
 
 .primary-btn {
-    background: #1769aa;
+    background: #0057b8;
     color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 87, 184, 0.2);
 }
 
 .primary-btn:hover {
     transform: translateY(-3px);
-    background: #12578e;
+    background: #00438e;
+    box-shadow: 0 15px 30px rgba(0, 87, 184, 0.3);
 }
 
 .secondary-btn {
-    border: 2px solid #1769aa;
-    color: #1769aa;
+    border: 2px solid #0057b8;
+    color: #0057b8;
+    background: transparent;
 }
 
 .secondary-btn:hover {
-    background: #1769aa;
+    background: #0057b8;
     color: #ffffff;
+    transform: translateY(-3px);
 }
 
 
-/* ---------- HERO CARD ---------- */
+/* =====================================================
+   HERO CARD
+   ===================================================== */
 
 .hero-card {
-    padding: 55px 35px;
+    padding: 60px 35px;
     text-align: center;
-    background: #14213d;
+    background: #061a33;
     color: white;
-    border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(20, 33, 61, 0.18);
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 60px rgba(6, 26, 51, 0.22);
+
     transform: rotate(2deg);
+    transition: 0.4s ease;
+}
+
+.hero-card:hover {
+    transform: rotate(0deg) translateY(-8px);
 }
 
 .hero-card .data-icon {
@@ -231,7 +298,9 @@ nav a:hover {
 }
 
 
-/* ---------- ABOUT ---------- */
+/* =====================================================
+   ABOUT
+   ===================================================== */
 
 .about-grid {
     display: grid;
@@ -246,24 +315,40 @@ nav a:hover {
 
 .mission-card {
     padding: 45px;
-    border-radius: 15px;
-    background: #f4f8fc;
-    border-left: 5px solid #1769aa;
+    border-radius: 16px;
+    background: #eaf4ff;
+    border-left: 5px solid #0057b8;
+    box-shadow: 0 15px 35px rgba(6, 26, 51, 0.06);
 }
 
 .mission-card h3 {
     font-size: 25px;
     margin-bottom: 15px;
-    color: #14213d;
+    color: #061a33;
 }
 
 
-/* ---------- VISION ---------- */
+/* =====================================================
+   VISION
+   ===================================================== */
 
 .vision-section {
-    padding: 90px 0;
-    background: #14213d;
+    padding: 100px 0;
+    background: #061a33;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-section::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    right: -100px;
+    top: -100px;
 }
 
 .vision-grid {
@@ -277,15 +362,21 @@ nav a:hover {
     color: white;
 }
 
+.vision-section h2 span {
+    color: #5ca9ff;
+}
+
 .vision-section p {
     color: #d9e2ed;
 }
 
 
-/* ---------- SERVICES ---------- */
+/* =====================================================
+   SERVICES
+   ===================================================== */
 
 .services-section {
-    background: #f8fafc;
+    background: #f5f8fc;
 }
 
 .services-grid {
@@ -297,16 +388,33 @@ nav a:hover {
 .service-card {
     position: relative;
     padding: 35px;
-    background: white;
-    border: 1px solid #e6ebf1;
-    border-radius: 14px;
-    transition: 0.3s ease;
+    background: #ffffff;
+    border: 1px solid #e2e9f1;
+    border-radius: 16px;
+    transition: 0.35s ease;
     overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: #0057b8;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.35s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(20, 33, 61, 0.1);
+    box-shadow: 0 20px 45px rgba(6, 26, 51, 0.12);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
 }
 
 .service-number {
@@ -315,7 +423,7 @@ nav a:hover {
     right: 20px;
     font-size: 13px;
     font-weight: 800;
-    color: #c8d5e2;
+    color: #c9d7e6;
 }
 
 .service-icon {
@@ -334,7 +442,9 @@ nav a:hover {
 }
 
 
-/* ---------- WHY US ---------- */
+/* =====================================================
+   WHY US
+   ===================================================== */
 
 .why-grid {
     display: grid;
@@ -345,13 +455,19 @@ nav a:hover {
 
 .why-main {
     padding: 40px;
-    background: #f4f8fc;
-    border-radius: 15px;
+    background: #eaf4ff;
+    border-radius: 16px;
+    border-top: 4px solid #0057b8;
 }
 
 .why-main p {
-    font-size: 20px;
+    font-size: 19px;
     color: #344054;
+    margin-bottom: 20px;
+}
+
+.why-main p:last-child {
+    margin-bottom: 0;
 }
 
 .values {
@@ -363,12 +479,18 @@ nav a:hover {
 .value {
     padding: 25px;
     border-bottom: 2px solid #e7edf3;
+    transition: 0.3s ease;
+}
+
+.value:hover {
+    border-bottom-color: #0057b8;
+    transform: translateX(5px);
 }
 
 .value span {
     font-size: 13px;
     font-weight: 800;
-    color: #1769aa;
+    color: #0057b8;
 }
 
 .value h3 {
@@ -377,10 +499,13 @@ nav a:hover {
 }
 
 
-/* ---------- CLIENTS ---------- */
+/* =====================================================
+   CLIENTS
+   ===================================================== */
 
 .clients-section {
     padding: 90px 0;
+    background: #ffffff;
 }
 
 .clients-grid {
@@ -393,19 +518,34 @@ nav a:hover {
 .clients-grid div {
     padding: 15px 25px;
     background: #f3f7fb;
-    border: 1px solid #e1e8f0;
+    border: 1px solid #dfe7ef;
     border-radius: 50px;
     font-weight: 600;
     color: #344054;
+    transition: 0.3s ease;
+}
+
+.clients-grid div:hover {
+    background: #eaf4ff;
+    border-color: #0057b8;
+    color: #0057b8;
+    transform: translateY(-3px);
 }
 
 
-/* ---------- CTA ---------- */
+/* =====================================================
+   CTA
+   ===================================================== */
 
 .cta {
     padding: 110px 0;
     text-align: center;
-    background: #1769aa;
+    background:
+        linear-gradient(
+            135deg,
+            #0057b8,
+            #003d82
+        );
 }
 
 .cta .section-label {
@@ -428,11 +568,22 @@ nav a:hover {
     color: #e2f0fb;
 }
 
+.cta .primary-btn {
+    background: #ffffff;
+    color: #0057b8;
+}
 
-/* ---------- CONTACT ---------- */
+.cta .primary-btn:hover {
+    background: #eaf4ff;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
 
 .contact-section {
-    background: #f8fafc;
+    background: #f5f8fc;
 }
 
 .contact-grid {
@@ -445,14 +596,15 @@ nav a:hover {
 .contact-action {
     padding: 40px;
     background: white;
-    border: 1px solid #e5eaf0;
-    border-radius: 15px;
+    border: 1px solid #e3e9f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(6, 26, 51, 0.05);
 }
 
 .contact-info h3,
 .contact-action h3 {
     font-size: 28px;
-    color: #14213d;
+    color: #061a33;
     margin-bottom: 10px;
 }
 
@@ -461,8 +613,8 @@ nav a:hover {
 }
 
 .contact-item strong {
-    color: #1769aa;
-    font-size: 14px;
+    color: #0057b8;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -472,12 +624,14 @@ nav a:hover {
     font-weight: 600;
 }
 
+
+/* =====================================================
+   CONTACT BUTTONS
+   ===================================================== */
+
 .contact-action p {
     margin: 20px 0 30px;
 }
-
-
-/* ---------- CONTACT BUTTONS ---------- */
 
 .whatsapp-btn,
 .call-btn {
@@ -491,30 +645,33 @@ nav a:hover {
 }
 
 .whatsapp-btn {
-    background: #1769aa;
+    background: #0057b8;
     color: white;
 }
 
 .whatsapp-btn:hover {
     transform: translateY(-3px);
+    background: #00438e;
 }
 
 .call-btn {
-    border: 2px solid #1769aa;
-    color: #1769aa;
+    border: 2px solid #0057b8;
+    color: #0057b8;
 }
 
 .call-btn:hover {
-    background: #1769aa;
+    background: #0057b8;
     color: white;
 }
 
 
-/* ---------- FOOTER ---------- */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 
 footer {
-    background: #0d1728;
-    padding: 35px 0;
+    background: #061a33;
+    padding: 40px 0;
 }
 
 .footer-content {
@@ -537,6 +694,31 @@ footer {
 
 
 /* =====================================================
+   IMAGE SUPPORT
+   ===================================================== */
+
+/* 
+   Example:
+
+   <img src="images/analytics.jpg"
+        alt="MaveriQuant Analytics">
+
+   Then use:
+
+   .hero-image {
+       width: 100%;
+       border-radius: 20px;
+   }
+*/
+
+.hero-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(6, 26, 51, 0.15);
+}
+
+
+/* =====================================================
    MOBILE RESPONSIVE DESIGN
    ===================================================== */
 
@@ -552,7 +734,7 @@ footer {
     }
 
     .hero {
-        padding: 80px 0;
+        padding: 90px 0;
     }
 
     .hero-card {
@@ -592,6 +774,7 @@ footer {
 
     .hero {
         min-height: auto;
+        padding: 70px 0;
     }
 
     .hero h2 {
@@ -608,6 +791,10 @@ footer {
 
     .hero-buttons .btn {
         text-align: center;
+    }
+
+    .hero-card {
+        transform: none;
     }
 
     .services-grid {
@@ -627,5 +814,4 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-
 }
