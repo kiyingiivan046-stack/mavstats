@@ -30,6 +30,23 @@ img {
 a {
     text-decoration: none;
 }
+.logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                width: 145px;
+            }
+        }
 
 .container {
     width: 90%;
